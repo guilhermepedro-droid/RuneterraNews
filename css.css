@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://i.ytimg.com/vi/asCYlZ7ab7g/maxresdefault.jpg');
+    background-size: cover; /* Garante que a imagem cubra toda a área do fundo */
+    background-position: center;
+    background-attachment: fixed; /* Fixar a imagem no fundo */
+}
+
+.container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com leve transparência */
+    border-radius: 8px; /* Adiciona borda arredondada */
+}

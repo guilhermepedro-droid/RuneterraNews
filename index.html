@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runeterra News</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://i.ytimg.com/vi/asCYlZ7ab7g/maxresdefault.jpg');
+            background-size: cover; /* Garante que a imagem cubra toda a área do fundo */
+            background-position: center;
+            background-attachment: fixed; /* Fixar a imagem no fundo */
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #d80000;
+            color: #fff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        header .menu {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Container principal */
+        .container {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com leve transparência */
+            border-radius: 8px; /* Adiciona borda arredondada */
+        }
+
+        .container h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .container p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        .slideshow-images {
+            display: flex;
+            width: 200%; /* Ajustado para 2 imagens (100% * 2) */
+            transition: transform 1s ease-in-out;
+        }
+
+        .slideshow-images img {
+            width: 50%; /* Cada imagem vai ocupar 50% da largura do contêiner */
+            max-width: 100%;
+            height: auto; /* Mantém a proporção */
+        }
+
+        /* Imagem com texto abaixo */
+        .image-with-text {
+            margin-bottom: 20px;
+        }
+
+        .image-with-text img {
+            width: 100%; /* Imagem vai ocupar 100% da largura do contêiner */
+            height: auto;
+        }
+
+        .image-with-text h1 {
+            font-size: 18px;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        /* Botão de ação */
+        .cta {
+            display: block;
+            background-color: #d80000;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .cta:hover {
+            background-color: #b00000;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const slideshowImages = document.querySelector(".slideshow-images");
+            const totalImages = 2; // Número total de imagens
+            let currentImageIndex = 0;
+
+            // Função para mudar a imagem
+            function changeImage() {
+                // Atualiza o índice da imagem atual
+                currentImageIndex = (currentImageIndex + 1) % totalImages;
+                // Aplica a transformação para mover as imagens
+                slideshowImages.style.transform = `translateX(-${currentImageIndex * 50}%)`; // Ajuste de 50% por imagem
+            }
+
+            // Mudar a imagem a cada 1 segundo
+            setInterval(changeImage, 1500); 
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="menu">☰</div>
+        <h1>RUNETERRA NEWS</h1>
+        <div class="menu">🔍</div>
+    </header>
+
+    <div class="container">
+        <h2>Quem é Ahri Vesani?</h2>
+        <p>Ahri, a raposa de nove caudas de League of Legends, brilhou ao se transformar em uma estrela do K-pop. Com vocais hipnotizantes e coreografias impecáveis, ela conquistou fãs nos palcos e nos Campos da Justiça. Sua presença magnética e estilo glamouroso fazem dela um ícone global. Entre batalhas e performances, Ahri encanta como ninguém.</p>
+        <div class="slideshow-container">
+            <div class="slideshow-images">
+                <img src="https://cdna.artstation.com/p/assets/images/images/000/546/476/large/michelle-hoefener-8-pop-star-ahri-splash-2.jpg?1432267403" alt="Imagem 2">
+                <img src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ahri/skins/skin04/images/ahri_splash_uncentered_4.jpg" alt="Imagem 1">
+            </div>
+        </div>
+
+        <div class="image-with-text">
+            <img src="ahri_ruiva.png" alt="">
+            <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate blanditiis excepturi pariatur facilis laudantium eos rerum sapiente labore distinctio, ipsam delectus iure deserunt quibusdam, hic amet molestias impedit eligendi ut?</h1>
+        </div>
+
+        <div class="image-with-text">
+            <img src="ahri_loira.png" alt="">
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ullam culpa minima assumenda velit tempora quaerat aut ipsum autem, obcaecati ratione debitis dolorum at deserunt, aspernatur molestiae dignissimos, atque provident!</h1>
+        </div>
+
+        <a href="#" class="cta">Saiba mais</a>
+    </div>
+</body>
+</html>
