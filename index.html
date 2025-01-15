@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Runeterra News</title>
+    <title>Runeterra News - quem é Ahri Vesani?</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-image: url('https://i.ytimg.com/vi/asCYlZ7ab7g/maxresdefault.jpg');
-            background-size: cover; /* Garante que a imagem cubra toda a área do fundo */
+            background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Fixar a imagem no fundo */
+            background-attachment: fixed;
         }
 
         /* Cabeçalho */
@@ -35,14 +35,48 @@
             cursor: pointer;
         }
 
+        /* Menu lateral */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .sidebar .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
         /* Container principal */
         .container {
             padding: 20px;
             max-width: 600px;
             margin: 0 auto;
             text-align: center;
-            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com leve transparência */
-            border-radius: 8px; /* Adiciona borda arredondada */
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
         }
 
         .container h2 {
@@ -67,23 +101,24 @@
 
         .slideshow-images {
             display: flex;
-            width: 200%; /* Ajustado para 2 imagens (100% * 2) */
+            width: 200%;
             transition: transform 1s ease-in-out;
         }
 
         .slideshow-images img {
-            width: 50%; /* Cada imagem vai ocupar 50% da largura do contêiner */
+            width: 50%;
             max-width: 100%;
-            height: auto; /* Mantém a proporção */
+            height: auto;
         }
 
         /* Imagem com texto abaixo */
         .image-with-text {
             margin-bottom: 20px;
+            text-align: center;
         }
 
         .image-with-text img {
-            width: 100%; /* Imagem vai ocupar 100% da largura do contêiner */
+            width: 100%;
             height: auto;
         }
 
@@ -91,6 +126,7 @@
             font-size: 18px;
             color: #333;
             margin-top: 10px;
+            font-weight: normal;
         }
 
         /* Botão de ação */
@@ -117,14 +153,25 @@
 
             // Função para mudar a imagem
             function changeImage() {
-                // Atualiza o índice da imagem atual
                 currentImageIndex = (currentImageIndex + 1) % totalImages;
-                // Aplica a transformação para mover as imagens
-                slideshowImages.style.transform = `translateX(-${currentImageIndex * 50}%)`; // Ajuste de 50% por imagem
+                slideshowImages.style.transform = `translateX(-${currentImageIndex * 50}%)`;
             }
 
-            // Mudar a imagem a cada 1 segundo
-            setInterval(changeImage, 1500); 
+            // Mudar a imagem a cada 1,5 segundos
+            setInterval(changeImage, 1500);
+
+            // Menu lateral
+            const openMenu = document.querySelector(".menu");
+            const sidebar = document.querySelector(".sidebar");
+            const closeMenu = document.querySelector(".close-btn");
+
+            openMenu.addEventListener("click", () => {
+                sidebar.style.width = "250px";
+            });
+
+            closeMenu.addEventListener("click", () => {
+                sidebar.style.width = "0";
+            });
         });
     </script>
 </head>
@@ -135,26 +182,46 @@
         <div class="menu">🔍</div>
     </header>
 
+    <!-- Menu lateral -->
+    <div class="sidebar">
+        <span class="close-btn">&times;</span>
+        <a href="index.html">Descubra mais por tras de Ahri Vesani 🦊🎵</a>
+        <a href="zaun.html">Fofocas da Subferia de Zaun ⌛💣</a>
+        <a href="akali.html">Akali, a beleza letal de Ionia</a>
+    </div>
+
     <div class="container">
         <h2>Quem é Ahri Vesani?</h2>
-        <p>Ahri, a raposa de nove caudas de League of Legends, brilhou ao se transformar em uma estrela do K-pop. Com vocais hipnotizantes e coreografias impecáveis, ela conquistou fãs nos palcos e nos Campos da Justiça. Sua presença magnética e estilo glamouroso fazem dela um ícone global. Entre batalhas e performances, Ahri encanta como ninguém.</p>
+        <p>"As emoções humanas têm o poder de gerar tanto o melhor quanto o pior, cabendo a nós decidir como usá-las."</p>
+        <br>
+        <p>Descubra mais por tras da artista pop mais badalada da década</p>
         <div class="slideshow-container">
             <div class="slideshow-images">
                 <img src="https://cdna.artstation.com/p/assets/images/images/000/546/476/large/michelle-hoefener-8-pop-star-ahri-splash-2.jpg?1432267403" alt="Imagem 2">
                 <img src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ahri/skins/skin04/images/ahri_splash_uncentered_4.jpg" alt="Imagem 1">
             </div>
         </div>
+        <p>Além dos holofotes: Ahri e seu compromisso com causas sociais
+            Apesar de sua agenda lotada, Ahri é conhecida por dedicar tempo e recursos a projetos beneficentes. Ela apoia iniciativas voltadas para a educação e o empoderamento de jovens artistas, reconhecendo a importância de dar oportunidades a novos talentos. Seu engajamento social é tão admirado quanto sua música, solidificando sua imagem como uma artista completa e altruísta.</p>
 
         <div class="image-with-text">
             <img src="ahri_ruiva.png" alt="">
-            <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate blanditiis excepturi pariatur facilis laudantium eos rerum sapiente labore distinctio, ipsam delectus iure deserunt quibusdam, hic amet molestias impedit eligendi ut?</h1>
+            <h1>Uma descoberta que mudou tudo
+                Ahri teve seu talento descoberto em uma competição local de canto, onde chamou a atenção de produtores musicais. Combinando sua voz cativante e habilidades de dança impressionantes, ela rapidamente assinou com uma grande gravadora. Seu primeiro single foi um sucesso estrondoso, impulsionando sua carreira para novos patamares e abrindo portas para sua ascensão como a artista mais promissora da década.</h1>
+        </div>
+
+        <div class="image-with-text">
+            <img src="ahri_jovem.jpg" alt="">
+            <h1>Ahri: de estudante tímida à estrela pop internacional
+                Antes de conquistar os palcos, Ahri era uma estudante reservada em sua escola de ensino médio, sempre fascinada por música e dança. Apesar de sua timidez, ela se destacava nas apresentações escolares, encantando colegas e professores com sua presença de palco magnética. Muitos que a conheciam naquela época lembram-se de sua determinação e amor pela arte, que já davam pistas do futuro brilhante que a aguardava.</h1>
         </div>
 
         <div class="image-with-text">
             <img src="ahri_loira.png" alt="">
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ullam culpa minima assumenda velit tempora quaerat aut ipsum autem, obcaecati ratione debitis dolorum at deserunt, aspernatur molestiae dignissimos, atque provident!</h1>
+            <h1>O legado e o futuro de Ahri no mundo do entretenimento
+                Com inúmeros prêmios e recordes em sua carreira, Ahri não mostra sinais de desaceleração. Além de continuar lançando hits que dominam as paradas, ela também explora novos territórios, como a atuação e a moda. Sua capacidade de se reinventar e de encantar o público a cada nova fase garante que seu legado como uma lenda do entretenimento permaneça intacto por gerações.</h1>
         </div>
-
+            
         <a href="#" class="cta">Saiba mais</a>
     </div>
 </body>

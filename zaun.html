@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runeterra News - Fofocas de Zaun</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://live.staticflickr.com/65535/52843734916_44f0aa92af_h.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #007b00; /* Verde */
+            color: #fff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        header .menu {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Menu lateral */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .sidebar .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Container principal */
+        .container {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+        }
+
+        .container h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .container p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        .slideshow-images {
+            display: flex;
+            width: 200%;
+            transition: transform 1s ease-in-out;
+        }
+
+        .slideshow-images img {
+            width: 50%;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Imagem com texto de Jinx e Ekko */
+        .featured-content img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin: 20px auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .featured-content p {
+            font-size: 16px;
+            color: #555;
+            text-align: justify;
+        }
+
+        /* Botão de ação */
+        .cta {
+            display: block;
+            background-color: #007b00; /* Verde */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .cta:hover {
+            background-color: #005f00; /* Verde escuro */
+        }
+
+        /* Efeitos de vídeo */
+        video {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        video:hover {
+            transform: scale(1.05);
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const slideshowImages = document.querySelector(".slideshow-images");
+            const totalImages = 2; // Número total de imagens
+            let currentImageIndex = 0;
+
+            // Função para mudar a imagem
+            function changeImage() {
+                currentImageIndex = (currentImageIndex + 1) % totalImages;
+                slideshowImages.style.transform = `translateX(-${currentImageIndex * 50}%)`;
+            }
+
+            // Mudar a imagem a cada 1.5 segundos
+            setInterval(changeImage, 1500);
+
+            // Menu lateral
+            const openMenu = document.querySelector(".menu");
+            const sidebar = document.querySelector(".sidebar");
+            const closeMenu = document.querySelector(".close-btn");
+
+            openMenu.addEventListener("click", () => {
+                sidebar.style.width = "250px";
+            });
+
+            closeMenu.addEventListener("click", () => {
+                sidebar.style.width = "0";
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="menu">☰</div>
+        <h1>RUNETERRA NEWS</h1>
+        <div class="menu">🔍</div>
+    </header>
+
+    <!-- Menu lateral -->
+    <div class="sidebar">
+        <span class="close-btn">&times;</span>
+        <a href="index.html">Descubra mais por trás de Ahri Vesani 🦊🎵</a>
+        <a href="zaun.html">Fofocas da Subferia de Zaun ⌛💣</a>
+        <a href="akali.html">Akali, a beleza letal de Ionia</a>
+    </div>
+
+    <div class="container">
+        <h2>Fofocas da Subferia de Zaun</h2>
+        <p>"Nem sempre o que brilha é um relógio de prata, às vezes é uma armadilha pronta para explodir."</p>
+        <br>
+        <p>Descubra os segredos mais obscuros e explosivos da Subferia de Zaun.</p>
+        <div class="slideshow-container">
+            <div class="slideshow-images">
+                <img src="Powder_fractured.jpeg" alt="Imagem 1">
+                <img src="Ekko_fogolume.jpeg" alt="Imagem 2">
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <div class="featured-content">
+            <img src="https://preview.redd.it/xj8s00ke523e1.jpeg?auto=webp&s=a4a7db1aa8d5760b14e3e5cef81a76a4c190194b" alt="Jinx e Ekko">
+            <p>Após a atuação invejável de Jinx e Ekko na segunda temporada de Arcane, muito se fala sobre a relação dos dois. A Atriz e o Ator estavam extremamente sincronizados e empenhados em seus papéis na série.</p>
+        </div>
+
+        <br>
+        
+        <div class="featured-content">
+            <img src="https://mixdeseries.com.br/wp-content/uploads/2024/11/Ekko-Jinx-casal-Arcane.jpg" alt="Jinx e Ekko">
+            <p>O clima e a química entre os dois é notável, bem similar a Zaun, intensa e imparável, porém após o encerramento da produção da segunda temporada de Arcane, nenhum dos dois deu alguma declaração confirmando ou negando a relação mais profunda de ambos.</p>
+        </div>
+
+        <div class="featured-content">
+            <img src="https://steamuserimages-a.akamaihd.net/ugc/6287472041258132/7B0FA11FBF34E5D7141BDE3772765A88E4DA6234/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" alt="Jinx e Ekko">
+            <p>A Atriz de Jinx e Powder, não confirma ou nega nada sobre sua relação com o Ator de Ekko, quando perguntada sobre nesta manhã em uma entrevista, ela afirma "Eu adoro ele e adorei atuar com ele também, porém tem certas coisas que são bem pessoais para falar em rede zaunita. Tipo sairia em todos os canais 'NOVOS MILES MORALES E GWEN STACY DA SUBFERIA' eu explodiria tudo facilmente." </p>
+        </div>
+
+        <div class="featured-content">
+            <img src="https://i.ytimg.com/vi/-ZtaWpipQIs/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGCggGih_MA8=&rs=AOn4CLAg5E9Gzc1Svx1mCFWkJvpkAdoMFg" alt="Jinx e Ekko">
+            <p>Infelizmente não foi possível fazer uma entrevista com o Ator de Ekko, porém quando perguntado sobre para seus amigos fogolumes que estavam numa pista de skate próximo do sumidouro, a qual Ekko frequenta com bastante recorrência, eles afirmaram: "É muito louco ver nosso mano depois de tantos relacionamentos, ter a certeza e estar decidido sobre o atual relacionamento, estamos muito felizes pelo Ekko." Com essa afirmação, será que nosso Puro Garoto Salvador é tão puro e inocente quanto parece? Vejamos...</p>
+        </div>
+
+        <div class="featured-content">
+            <img src="ekko_angry.png" alt="Ekko brabo">
+            <b>O Passado do Garoto Salvador</b>
+            <p>Com a curiosidade de nossos jornalistas, iniciamos uma leve investigação para entendermos o que é de grave por trás dessa história do nosso "Puro Garoto Salvador".</p>
+            <br>
+            <p>Ficamos chocados com a quantidade de relacionamentos que Ekko teve antes da sua química com a Jinx, para alguns isso pode ser uma questão boba de "Passado é passado, o que sobrou é aprendizado", porém para outros isso pode se tornar uma questão bem presente e complexa.</p>
+            <br>
+            <b>Confira abaixo todos os relacionamentos/rolos que Ekko teve até o momento:</b>
+        </div>
+        
+        <div class="featured-content">
+            <img src="https://i.pinimg.com/originals/72/77/3b/72773b6d54664ded300415885ebc27b5.png" alt="Taliyah e Ekko">
+            <b>Ekko e Taliyah já se engraçaram em "The Climb" por meados de 2018</b>
+            <p>The Climb | Season 2018 Cinematic - League of Legends (vulgo "Epoca que eramos felizes e não sabiamos")</p>
+        </div>
+
+        <br><br>
+
+        <div class="featured-content">
+            <br>
+            <b>Ekko e Qiyanna aparentemente já tiveram uma relação mais calorosa na banda "True Damage"(2019), porem cantora nega relacionamento serio.</b>
+            <img src="https://preview.redd.it/wygefw40lrc41.jpg?width=849&format=pjpg&auto=webp&s=1ef7abed97143975fae4c5bd25f168eb73caaab9" alt="Qiyanna e Ekko">
+        </div>
+
+        <br><br><br><br>
+
+        <div class="featured-content">
+            <b>Ainda em True Damage: Akali e Ekko pareciam ter uma relação mais intima, porem cantora nega e afirma que houve apenas amizade entre os dois.</b>
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj7X_pcXgs1q9VIVq0uz6t5PCZCrvI5V0iZim5k0ohOq-QtlDPdtfmFiFDuAhh7bsoIRjLQTEWx4blSPmIeKQyVfrkw6_aSsfoTDTSpj-ynEx1CZHGMETZcw-9yfbJwhhrM7o6QmMlduuk6/s1600/75625306_10162744125275556_770193915138539520_o.jpg" alt="Akali e Ekko">
+           
+
+            <p>True Damage - Giants (Remix Prod. DRX)</p>
+        </div>
+
+
+        <br><br><br>
+
+        <div class="featured-content">
+            <b>Dizem que durante as pós gravações de Pulsefire em 2020, Ekko e Ezreal deram uma festa na praia e aparentemente tiveram um caso. </b>
+                
+            <br>
+
+            <p>informantes dizeram que Ekko teve medo de sofrer Bifobia na época, então pagou para paparazzis manterem segredo. o caso gera discussão até os dias atuais</p>
+            
+            <img src="Ekko_Ezreal.jpg" alt="Ezreal e Ekko">
+        </div>
+
+
+        <br><br><br>
+
+        <div class="featured-content">
+            <b>Em meados de 28 de Outubro de 2020, Seraphine vivia um Amor Platônico por Ekko</b>
+            <br>
+            <p>A Cantora Seraphine afirma que sempre teve uma quedinha por Ekko desde de meados de 2019 em sua estreia em "Giants" de True Damage, porem por talvez Ekko acabar de sair de uma situação difícil sobre sua festa na praia com Ezreal, escolheu por ficar um tempo sozinho longe de relacionamentos.</p>
+            <br>
+            <p>A Cantora afirma em entrevista: "Ekko disse que me considera muito, mas por causa de problemas pessoais, por eu ser sua SUPER MELHOR AMIGA DO CORAÇÃO e não querer estragar a nossa amizade, ele decidiu não ir para frente sobre. Mas a esperança é a última que morre, não é mesmo? :3"</p>
+        
+            <!-- Container de imagens com a classe de animação e setas -->
+            <div class="seraphine-images" onclick="nextImage()">
+                <div class="arrow left" onclick="previousImage(event)">&#10094;</div>
+                <div class="arrow right" onclick="nextImage(event)">&#10095;</div>
+                <img id="seraphine-image" src="seraphine_1.avif" alt="seraphine_1" class="fade">
+            </div>
+            <p>clique na imagem para altera</p>
+            <br>
+        </div>
+        
+        <script>
+            // Lista de imagens
+            const images = [
+                "seraphine_1.avif",
+                "seraphine_2.avif",
+                "seraphine_3.png",
+                "seraphine_4.jpg",
+                "Ekko_LOR.webp"
+            ];
+        
+            let currentImageIndex = 0; // Índice da imagem atual
+        
+            // Função para mudar para a próxima imagem com animação
+            function nextImage(event) {
+                // Evita que o clique nas setas seja registrado como parte da navegação
+                if (event) event.stopPropagation();
+        
+                const imageElement = document.getElementById("seraphine-image");
+                
+                // Adiciona a classe de fade-out
+                imageElement.classList.add("fade-out");
+        
+                // Após o tempo da animação, troca a imagem e reinicia a animação
+                setTimeout(() => {
+                    currentImageIndex = (currentImageIndex + 1) % images.length;
+                    imageElement.src = images[currentImageIndex];
+        
+                    // Reinicia a animação de fade-in
+                    imageElement.classList.remove("fade-out");
+                    imageElement.classList.add("fade");
+                }, 500); // O tempo da animação (500ms)
+            }
+        
+            // Função para mudar para a imagem anterior com animação
+            function previousImage(event) {
+                // Evita que o clique nas setas seja registrado como parte da navegação
+                if (event) event.stopPropagation();
+        
+                const imageElement = document.getElementById("seraphine-image");
+        
+                // Adiciona a classe de fade-out
+                imageElement.classList.add("fade-out");
+        
+                // Após o tempo da animação, troca a imagem e reinicia a animação
+                setTimeout(() => {
+                    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+                    imageElement.src = images[currentImageIndex];
+        
+                    // Reinicia a animação de fade-in
+                    imageElement.classList.remove("fade-out");
+                    imageElement.classList.add("fade");
+                }, 500); // O tempo da animação (500ms)
+            }
+        </script>
+        
+        <style>
+            /* Adicionando a animação de fade */
+            .fade {
+                opacity: 1;
+                transition: opacity 0.5s ease-in-out;
+            }
+        
+            .fade-out {
+                opacity: 0;
+            }
+        
+            /* Estilo para as setas */
+            .arrow {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 30px;
+                color: white;
+                padding: 10px;
+                cursor: pointer;
+                z-index: 10;
+            }
+        
+            .left {
+                left: 10px;
+            }
+        
+            .right {
+                right: 10px;
+            }
+        
+            /* Adicionando efeito de hover nas setas */
+            .arrow:hover {
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: 50%;
+            }
+        
+            /* Container de imagem com as setas */
+            .seraphine-images {
+                position: relative;
+                display: inline-block;
+            }
+        </style>
+        <br>
+        
+        <video src="Seraphine caidinha pelo Ekko, celoko gada D+.mp4" controls></video>
+        <p>Por mais que não reciproco, era mais do que notavel a adimiração e amor de Seraphine por Ekko</p>
+        <br><br><br>
+        <div class="featured-content">
+            <b>2 anos depois, Ekko aparece se engraçando com Zeri.</b>
+
+            <p>De forma preve ainda subferia de Zaun, Ekko e Zeri são flagrados em suposto encontro. porem depois desse caso nada mais veio a publico sobre a relação dos dois.</p>
+            
+            <img src="https://preview.redd.it/osa63exefqaa1.jpg?auto=webp&s=8dd27e605f03d6d08c89e72919c5388f4c489dde" alt="Zeri e Ekko">
+        </div>
+
+        <br><br><br>
+
+        <div class="featured-content">
+            <b>Então em Agosto de 2022, Ekko e Sona aparecem tendo um relacionamento serio.</b>
+
+            <p>Ocorrendo de um jeito totalmente chocante surge um Casal que ninguem esparava, durante a produção de Star Guardians de 2022, Ekko e Sona são vistos andando juntos com muita frequencia, logo depois foi confirmado que ambos estavam em um namoro.</p>
+            <img src="https://i.redd.it/9cvz183moxf91.jpg" alt="Zeri e Ekko">
+            <p>porem Infelizmente no final de 2023 Ekko fala em entrevista que houve o termino, porem Sona fala não nada sobre.</p>
+        </div>
+        
+        <br><br><br><br>
+
+        <div class="featured-content">
+            <b>Logo em Seguida no começo de 2024, Ekko é visto em Super Festa em Piltover</b>
+
+            <p>No começo do ano de 2024, Ekko teve um atitude que muitos julgam equivogada, aparece com visual totalmente novo e dirigindo acima do limite de velocidade e entrando de penetra em uma Festa em Piltover, logo após um termino de um relacionamento</p>
+            <img src="https://pbs.twimg.com/media/FDxH4Q-WYAIPnM2.jpg:large" alt="Ekko moto">
+            <br>
+            <p>Ainda na mesma Festa Ekko decidi dar um cima de todas as garotas presente ao mesmo, seus amigos fogolumes afirmam:"Maluco não perde tempo né?".</p>
+            <img src="Ekko_festa_piltover.webp" alt="Ekko na Festa de Piltover">
+         
+        </div>
+
+        <br><br><br><br><br>
+
+        <div class="featured-content">
+            <b>Dias atuais (vulgo 2025)</b>
+            <p>Finalmente chegando nos dias atuais, voltamos para a Relação de Ekko e Jinx.</p>
+            <img src="time_bomb_final_image.webp" alt="Ekko e Powder">
+            <p>Bem é notavel que nosso Garoto Salvador tem um passsado que pode se julgar como conturbado, onde Ekko teve que engulir muita porra calado.</p>
+            <p>porem se mostra, segundo informantes, que Ekko esta determinado e decidido em ter uma relação a serio com Jinx</p>
+            <p>cabe ela agora julgar o que é melhor para si mesma.</p>
+
+            <b>SERÁ QUE ESSA BOMBA RELOGIO EXPLODE? FIQUE LIGADO EM RUNETERRA NEWS!</b>
+         
+            
+        </div>
+
+        <a href="index.html" class="cta">Voltar para Runeterra News</a>
+    </div>
+
+
+
+    
+</body>
+</html>
